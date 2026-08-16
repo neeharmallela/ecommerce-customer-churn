@@ -69,8 +69,8 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/predict",
-        formData
+      "https://ecommerce-churn-api-oj67.onrender.com/predict",
+      formData
       );
 
       setResult(response.data);
