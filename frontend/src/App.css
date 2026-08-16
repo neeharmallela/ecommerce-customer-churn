@@ -1,0 +1,329 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+  background: #111827;
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.brand p {
+  margin: 3px 0 0;
+  color: #aeb8c9;
+  font-size: 13px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.status span {
+  width: 9px;
+  height: 9px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+/* Main */
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 35px auto;
+}
+
+.hero {
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border: 1px solid #e4e8ef;
+}
+
+.hero h2 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.hero p {
+  margin: 0;
+  color: #687386;
+}
+
+.hero-icon {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #eef4ff;
+  color: #2563eb;
+}
+
+/* Content */
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  border: 1px solid #e4e8ef;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.card-title h3 {
+  margin: 0;
+}
+
+/* Form */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d7dce5;
+  border-radius: 9px;
+  background: #fafbfc;
+  font-size: 14px;
+  outline: none;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #2563eb;
+}
+
+.predict-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.predict-btn:hover {
+  background: #1d4ed8;
+}
+
+.predict-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Result */
+
+.result-card {
+  min-height: 500px;
+}
+
+.empty-result {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #687386;
+}
+
+.empty-result h3 {
+  color: #172033;
+  margin-bottom: 5px;
+}
+
+.result {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.risk-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.result h2 {
+  margin: 5px;
+  font-size: 27px;
+}
+
+.probability {
+  font-size: 52px;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+.result p {
+  color: #687386;
+}
+
+.progress {
+  height: 12px;
+  background: #e8edf3;
+  border-radius: 20px;
+  margin: 25px 0;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  background: currentColor;
+  border-radius: inherit;
+}
+
+.low {
+  color: #16a34a;
+}
+
+.medium {
+  color: #d97706;
+}
+
+.high {
+  color: #dc2626;
+}
+
+.prediction-text {
+  padding: 15px;
+  border-radius: 10px;
+  background: #f5f7fa;
+  color: #172033;
+  margin-top: 20px;
+}
+
+.recommendation {
+  margin-top: 20px;
+  text-align: left;
+  padding: 16px;
+  border-radius: 10px;
+  background: #f7f9fc;
+  color: #172033;
+}
+
+.recommendation p {
+  margin-bottom: 0;
+}
+
+.error-box {
+  padding: 25px;
+  background: #fef2f2;
+  color: #b91c1c;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #7b8494;
+  font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    padding: 16px;
+  }
+
+  .status {
+    display: none;
+  }
+
+  .container {
+    width: 94%;
+  }
+
+  .hero {
+    padding: 22px;
+  }
+
+  .hero h2 {
+    font-size: 23px;
+  }
+
+  .hero-icon {
+    display: none;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
